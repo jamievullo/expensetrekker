@@ -12,7 +12,15 @@ export class ExpenseForm extends React.Component {
     }
 
     handleSubmit = (e) => {
-        e.preventDefault()        
+        e.preventDefault()   
+        this.props.addExpense(this.state)
+        this.setState({
+        date: "",
+        description: "",
+        amount: "",
+        storeName: "",
+        paymentType: "Cash"
+        })
     }
 
     handleChange = (e) => {

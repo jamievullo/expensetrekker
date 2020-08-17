@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import ExpenseForm from './Components/ExpenseForm';
+import Table from './Components/Table'
 
 export class App extends React.Component {
 
@@ -8,18 +9,21 @@ export class App extends React.Component {
     setUpdated: true
   }
 
-expenseLog = []
+  expenseLog = []
 
   addExpense = (expense) => {
+    this.expenseLog.push(expense)
     this.setState({
       setUpdated: true
     })
+    console.log(this.expenseLog)
   }
 
   render() {
     return (
       <div className="App">
-        <ExpenseForm />
+        <ExpenseForm addExpense={this.addExpense}/>
+        <Table expenseLog={this.expenseLog}/>
       </div>
     )
   }
