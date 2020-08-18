@@ -32,6 +32,7 @@ export class ExpenseForm extends React.Component {
     render() {
         return (
             <div>
+                <h1>Expense Trekker</h1>
                 <Form onSubmit={this.handleSubmit}>
                     <Form.Group>
                         <Form.Label>Date</Form.Label>
@@ -52,14 +53,14 @@ export class ExpenseForm extends React.Component {
                         <Form.Control type="text" name="description" value={this.state.description} onChange={this.handleChange} placeholder="What did you buy?" />                    
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label>Amount</Form.Label>
-                        <Form.Control type="text" name="amount" value={this.state.amount} onChange={this.handleChange} placeholder="Amount Spent?" />                    
-                    </Form.Group>
-                    <Form.Group>
                         <Form.Label>Store Name</Form.Label>
                         <Form.Control type="text" name="storeName" value={this.state.storeName} onChange={this.handleChange} placeholder="Store Name?" />                    
                     </Form.Group>
-                    <Button type="submit" variant="secondary" size="lg">
+                    <Form.Group>
+                        <Form.Label>Amount</Form.Label>
+                        <Form.Control type="text" name="amount" value={this.state.amount} onChange={this.handleChange} placeholder="Amount Spent?" />                    
+                    </Form.Group>
+                    <Button id="add-expense-button" type="submit" variant="secondary" size="lg">
                         Add Expense
                     </Button>
                 </Form>
