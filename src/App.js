@@ -18,8 +18,12 @@ export class App extends React.Component {
     })
   }
 
-  deleteExpense = (e) => {
-    console.log(e)
+  deleteExpense = (key) => {
+    this.expenseLog.splice(key, 1)
+    this.setState({
+      stateUpdated: true
+    })
+    console.log(this.expenseLog)
   }
 
   render() {

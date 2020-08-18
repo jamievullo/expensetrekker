@@ -15,7 +15,7 @@ export class Table extends React.Component {
                 <div id="table-column">{this.props.expense.description}</div>
                 <div id="table-column">{this.props.expense.storeName}</div>
                 <div id="table-column">{this.props.expense.amount}</div>
-                <Button onClick={e => this.props.deleteExpense(this.props.key)} variant="secondary" size="sm">X</Button>
+                <Button onClick={e => this.props.deleteExpense(this._reactInternalFiber.key)} variant="secondary" size="sm">X</Button>
             </div>
         )
     }
