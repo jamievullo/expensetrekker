@@ -49,12 +49,12 @@ export class ExpenseForm extends React.Component {
                         </Form.Control>
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label>Description</Form.Label>
-                        <Form.Control type="text" name="description" value={this.state.description} onChange={this.handleChange} placeholder="What did you buy?" required minLength="4"/>                    
-                    </Form.Group>
-                    <Form.Group>
                         <Form.Label>Store Name</Form.Label>
                         <Form.Control type="text" name="storeName" value={this.state.storeName} onChange={this.handleChange} placeholder="Store Name?" required minLength="4"/>                    
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Description</Form.Label>
+                        <Form.Control type="text" name="description" value={this.state.description} onChange={this.handleChange} placeholder="What did you buy?" required minLength="4"/>                    
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>Amount</Form.Label>
