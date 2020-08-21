@@ -14,6 +14,7 @@ export class App extends React.Component {
   addExpense = (expense) => {
     this.expenseLog.push(expense)
     this.setState({
+      //force re-render
       stateUpdated: true
     })
   }
@@ -21,6 +22,7 @@ export class App extends React.Component {
   deleteExpense = (key) => {
     this.expenseLog.splice(key, 1)
     this.setState({
+      //force re-render
       stateUpdated: true
     })
     console.log(this.expenseLog)
